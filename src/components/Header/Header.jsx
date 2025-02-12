@@ -13,9 +13,9 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 const Header = () => {
   return (
     <Navbar
-      variant="dark"
+      variant=""
       expand="lg"
-      className="bg-dark transparent text-white sticky-top header"
+      className="bg-transparent text-white sticky-top"
     >
       <Container fluid>
         <Navbar.Brand href="#">
@@ -28,12 +28,24 @@ const Header = () => {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Nav.Link href="#action1 ">Home</Nav.Link>
-            <Nav.Link href="#action2">TVShow</Nav.Link>
-            <Nav.Link href="#action2">Movies</Nav.Link>
-            <Nav.Link href="#action2">Latest</Nav.Link>
-            <Nav.Link href="#action2">MyList</Nav.Link>
-            <Nav.Link href="#action2">Browse by Languages</Nav.Link>
+            <Nav.Link href="#action1" className="text-white fs-5">
+              Home
+            </Nav.Link>
+            <Nav.Link href="#action2" className="text-white fs-5">
+              TVShow
+            </Nav.Link>
+            <Nav.Link href="#action2" className="text-white fs-5">
+              Movies
+            </Nav.Link>
+            <Nav.Link href="#action2" className="text-white fs-5 ">
+              Latest
+            </Nav.Link>
+            <Nav.Link href="#action2" className="text-white fs-5 ">
+              MyList
+            </Nav.Link>
+            <Nav.Link href="#action2" className="text-white fs-5 ">
+              Browse by Languages
+            </Nav.Link>
 
             <Nav.Link href="#" disabled></Nav.Link>
           </Nav>
