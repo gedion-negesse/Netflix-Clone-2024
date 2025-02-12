@@ -19,7 +19,7 @@ const Header = () => {
     >
       <Container fluid>
         <Navbar.Brand href="#">
-          <img src={HeaderLogo} alt="" />
+          <img src={HeaderLogo} alt="Netflix logo" width="100px" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">

@@ -15,4 +15,6 @@
 }
 body {
   background: #111;
+  overflow-x: hidden;
+  max-width: 100%;
 }

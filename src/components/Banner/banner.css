@@ -52,10 +52,10 @@
 .bannerbutton {
   background: #fff;
   color: #000;
-  padding: 1rem 4rem;
+  padding: 0.9rem 2.3rem;
   font-weight: 700;
   margin-right: 2rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   border: none;
   cursor: pointer;
   outline: none;
@@ -73,26 +73,13 @@
   cursor: pointer;
   border: none;
 
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   border-radius: 0.2vw;
   font-weight: 700;
   background-color: rgba(51, 51, 51, 0.5);
-  padding: 1rem 3rem;
+  padding: 1rem 2rem;
   margin-right: 2rem;
   outline: none;
   color: #fff;
   /*background: transparent;*/
 }
-
-/*.banner_button {
-  cursor: pointer;
-  /*color: #fff;*/
-/*outline: none;
-  border: none;
-  font-size: 1.2rem;
-  font-weight: 700;
-  border-radius: 0.2vw;
-  padding: 1rem 3rem;
-  margin-right: 2rem;
-  background-color: rgba(51,  51,  51,  0.5);
-}*/
