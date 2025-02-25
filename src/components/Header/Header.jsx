@@ -13,57 +13,42 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 const Header = () => {
   return (
     <Navbar
-      variant=""
+      variant="dark"
       expand="lg"
-      className="bg-transparent text-white sticky-top"
+      className="text-white sticky-top"
+      style={{ backgroundColor: "black", padding: "10px 0" }}
     >
       <Container fluid>
         <Navbar.Brand href="#">
-          <img src={HeaderLogo} alt="Netflix logo" width="100px" />
+          <img src={HeaderLogo} alt="Netflix Logo" width="100" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
-          <Nav
-            className="me-auto my-2 my-lg-0"
-            style={{ maxHeight: "100px" }}
-            navbarScroll
-          >
-            <Nav.Link href="#action1" className="text-white fs-5">
-              Home
-            </Nav.Link>
-            <Nav.Link href="#action2" className="text-white fs-5">
-              TVShow
-            </Nav.Link>
-            <Nav.Link href="#action2" className="text-white fs-5">
-              Movies
-            </Nav.Link>
-            <Nav.Link href="#action2" className="text-white fs-5 ">
-              Latest
-            </Nav.Link>
-            <Nav.Link href="#action2" className="text-white fs-5 ">
-              MyList
-            </Nav.Link>
-            <Nav.Link href="#action2" className="text-white fs-5 ">
-              Browse by Languages
-            </Nav.Link>
-
-            <Nav.Link href="#" disabled></Nav.Link>
+          <Nav className="me-auto gap-3">
+            <Nav.Link href="#action1 ">Home</Nav.Link>
+            <Nav.Link href="#action2">TVShow</Nav.Link>
+            <Nav.Link href="#action2">Movies</Nav.Link>
+            <Nav.Link href="#action2">Latest</Nav.Link>
+            <Nav.Link href="#action2">MyList</Nav.Link>
+            <Nav.Link href="#action2">Browse by Languages</Nav.Link>
           </Nav>
-          <Form className="d-flex gap-3 text-white">
-            <Nav.Link href="#" disabled>
+
+          <Nav className="align-items-flex-start">
+            <Nav.Link href="#">
               <SearchIcon />
             </Nav.Link>
-            <Nav.Link href="#" disabled></Nav.Link>
-            <Nav.Link href="#action2">
+
+            <Nav.Link href="#">
               <NotificationsNoneIcon />
             </Nav.Link>
-            <Nav.Link href="#" disabled></Nav.Link>
-            <Nav.Link href="#" disabled>
+
+            <Nav.Link href="#">
               <AccountBoxIcon />
             </Nav.Link>
-
-            <ArrowDropDownIcon />
-          </Form>
+            <Nav.Link href="#">
+              <ArrowDropDownIcon />
+            </Nav.Link>
+          </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
