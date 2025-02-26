@@ -17,32 +17,14 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
   useEffect(() => {
     (async () => {
       try {
-        console.log(fetchUrl);
-
         const request = await axios.get(fetchUrl);
-        console.log(request);
+
         setMovies(request.data.results);
       } catch (error) {
         console.log("error", error);
       }
     })();
   }, [fetchUrl]); // using dependency every time page load it will fech new data
-
-  //**we can use the fetch method too */
-
-  /*useEffect(() => {
-    fetch(`https://api.themoviedb.org/3${fetchUrl}`)
-      .then((req) => req.json())
-      .then((data) => {
-        const singleVideo = data.results;
-        setMovies(singleVideo);
-      }).catch((error) => {
-        console.log("error", error);
-      });
-  }, [fetchUrl]);*/
-
-  // defining the trailer vedio function
-  //************************************** *
 
   const handleClick = (movie) => {
     if (trailerUrl) {
@@ -51,10 +33,8 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
       movieTrailer(movie?.title || movie?.name || movie?.original_name)
         // passing the parameters to the movie trailer
         .then((url) => {
-          console.log(url);
           const urlparams = new URLSearchParams(new URL(url).search); // extracting the video id by parsind whts returned from the movie-trailer
-          console.log(urlparams);
-          console.log(urlparams.get("v"));
+
           setTrailerUrl(urlparams.get("v")); // seting the newly extracted video id starts with (v=jkhk1233)
         });
     }
@@ -77,10 +57,11 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
             onClick={() => handleClick(movie)}
             key={i}
             src={`${base_url}${
-              isLargeRow ? movie.poster_path : movie.backdrop_path // when mapping if there isLargeRow is true use the poster card image if not use th backdrop image
+              isLargeRow ? movie?.poster_path : movie?.backdrop_path // when mapping if there isLargeRow is true use the poster card image if not use th backdrop image
             }`}
-            alt={movie.name}
+            alt={movie?.name}
             className={`row_poster ${isLargeRow && "row_posterLarge"}`} // if isLargeRow is true or passed as propes use the css class name "row_posterLarge" this will change the hight of the poster
+            onError={(e) => (e.target.style.display = "none")} //if there is empty array or cant fetch the data dont show any thing.
           />
         ))}
       </div>

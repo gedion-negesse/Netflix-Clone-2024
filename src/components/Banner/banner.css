@@ -1,12 +1,3 @@
-/*.banner {
-  background-size: cover;
-  background-image: `url( `https://image.tmdb.org/t/p/original${movie?.backdrop_path}`)`;
-}
-*/
-* {
-  padding: 0;
-  margin: 0;
-}
 .banner {
   margin-top: -10vh;
   height: 90vh;
@@ -111,15 +102,11 @@
     font-size: 0.9rem;
   }
 }
-/*@media screen and (max-width: 576px) {
-  .banner {
-    height: 200px;
-  }
-}*/
+
 @media (max-width: 480px) {
   .banner {
     height: 250px;
-    /* Further reduce height for very small screens */
+    /* reduce height for very small screens */
   }
 
   .banner_contents {
